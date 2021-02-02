@@ -8,7 +8,7 @@ public class Client {
         
         InetAddress ip = InetAddress.getLocalHost();
         System.out.println(ip);
-        Socket clientsocket = new Socket(ip, 1234);
+        Socket clientsocket = new Socket("192.168.0.102", 1234);
         
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientsocket.getInputStream()));
         DataOutputStream outToServer = new DataOutputStream(clientsocket.getOutputStream());
